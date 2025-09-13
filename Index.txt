@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Noureddine Lazher Mouelhi — Translation & Computer Science</title>
+<meta name="description" content="Noureddine Lazher Mouelhi — Professor of Translation (Arabic / French / English) and Computer Science — Sorbonne University. Translator, developer, researcher."/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+<style>
+  :root{
+    --bg:#0f1724; --card:#0b1220; --muted:#9aa6b2; --accent:#6ad3ff;
+    --glass: rgba(255,255,255,0.03);
+    --radius:12px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: #e6eef6;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:
+    linear-gradient(180deg, rgba(10,14,20,1) 0%, rgba(5,9,14,1) 100%);
+    min-height:100vh; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+  header{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;backdrop-filter:blur(6px);position:sticky;top:0;z-index:20}
+  .brand{display:flex;gap:12px;align-items:center}
+  .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#0ea5a3,#7dd3fc);display:grid;place-items:center;font-weight:700;color:#042027}
+  .title{line-height:1}
+  .title h1{font-size:16px;margin:0}
+  .title p{margin:0;font-size:12px;color:var(--muted)}
+  nav{display:flex;gap:10px;align-items:center}
+  nav button{background:transparent;border:1px solid transparent;color:var(--muted);padding:8px 10px;border-radius:8px;font-size:13px;cursor:pointer}
+  nav button.primary{background:linear-gradient(90deg,var(--accent),#86efac00);color:#042027;border:0}
+  .container{max-width:1100px;margin:28px auto;padding:0 18px}
+  .hero{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center}
+  .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+  .hero-left h2{margin:0 0 8px 0}
+  .badges{display:flex;gap:8px;margin:12px 0}
+  .badge{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+  .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-size:13px}
+  .hero-right img{width:100%;border-radius:10px;object-fit:cover;height:260px}
+  section{margin-top:20px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .lang-toggle{display:flex;gap:6px}
+  .lang-toggle button{padding:6px 8px;border-radius:8px;border:1px solid transparent;background:transparent;color:var(--muted);cursor:pointer}
+  footer{margin:28px 0;text-align:center;color:var(--muted);font-size:13px}
+  a{color:var(--accent);text-decoration:none}
+  /* responsive */
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;gap:14px}
+    .hero-right img{height:200px}
+    .grid-3{grid-template-columns:1fr}
+    .grid-2{grid-template-columns:1fr}
+    nav{display:none}
+    header{padding:12px}
+  }
+  /* small UI */
+  .portfolio-img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+  .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#042027;font-weight:600;border:0;cursor:pointer}
+  .muted{color:var(--muted);font-size:14px}
+  .tiny{font-size:12px;color:var(--muted)}
+  .card h3{margin:4px 0 8px}
+  .example{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:8px;font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;font-size:13px}
+  .contact-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .contact-row a{display:inline-flex;align-items:center;gap:8px}
+  .socials{display:flex;gap:8px;align-items:center}
+  /* Arabic adjustments */
+  .rtl{direction:rtl;text-align:right}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo" aria-hidden>NL</div>
+    <div class="title">
+      <h1>Noureddine Lazher Mouelhi</h1>
+      <p>Professor — Translation (AR/FR/EN) • Computer Science (Sorbonne)</p>
+    </div>
+  </div>
+
+  <nav aria-label="Main navigation">
+    <div class="lang-toggle" role="tablist" aria-label="Language switch">
+      <button id="enBtn" class="primary" data-lang="en">EN</button>
+      <button id="frBtn" data-lang="fr">FR</button>
+      <button id="arBtn" data-lang="ar">ع</button>
+    </div>
+  </nav>
+</header>
+
+<main class="container" id="page">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="card hero-left" id="heroCard">
+      <h2 id="greet">Hello — I'm Noureddine</h2>
+      <div class="badges" id="badges">
+        <span class="badge">Sorbonne University — Master in Computer Science</span>
+        <span class="badge">MA in Translation (Arabic / French / English)</span>
+        <span class="badge">Professor • Researcher • Developer</span>
+      </div>
+
+      <p class="muted" id="heroDesc">
+        Multidisciplinary professor and translator bridging linguistic expertise with technical skills. I teach translation, computational linguistics, and develop language-focused web tools.
+      </p>
+
+      <div class="skills" id="skillsList">
+        <div class="skill">Arabic ↔ French ↔ English</div>
+        <div class="skill">CAT Tools (Trados, MemoQ)</div>
+        <div class="skill">NLP & Text Processing (Python)</div>
+        <div class="skill">Web Dev (HTML / CSS / JS)</div>
+        <div class="skill">Machine Translation Evaluation</div>
+      </div>
+
+      <div style="margin-top:14px;">
+        <button class="btn" id="downloadCV">Download CV</button>
+        <button class="btn" id="contactBtn" style="background:#ffffff1a;margin-left:8px">Contact</button>
+      </div>
+    </div>
+
+    <aside class="card hero-right" aria-labelledby="heroCard">
+      <img alt="Academic & development collage" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6f9d0f2b5cf2b4f5b6a6d5d3ad1b6f43">
+      <p class="tiny" style="margin-top:8px">Noureddine Lazher Mouelhi — Translation • Computer Science • Sorbonne</p>
+    </aside>
+  </section>
+
+  <!-- EDUCATION & SKILLS -->
+  <section class="grid-2" aria-label="Education and Skills">
+    <div class="card">
+      <h3 id="eduTitle">Education</h3>
+      <p class="tiny">Detailed academic background</p>
+      <ul>
+        <li><strong>Master — Computer Science</strong>, Sorbonne University — <span class="tiny">focus: NLP, human–computer interaction</span></li>
+        <li><strong>MA — Translation</strong> (Arabic / French / English) — <span class="tiny">theory & practice, professional translation</span></li>
+        <li><strong>Ongoing</strong>: Research on translation tech, evaluation of MT systems</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3 id="skillsTitle">Technical & Linguistic Skills</h3>
+      <div class="skills" style="margin-top:8px">
+        <div class="skill">Python (NLP & scripts)</div>
+        <div class="skill">JavaScript (interactive tools)</div>
+        <div class="skill">HTML / CSS / Responsive design</div>
+        <div class="skill">Machine Translation evaluation</div>
+        <div class="skill">CAT tools, QA, terminology management</div>
+        <div class="skill">Teaching & curriculum design</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES / COURSES -->
+  <section class="card">
+    <h3 id="servicesTitle">Courses & Services</h3>
+    <div class="tiny muted">Examples of what I teach and offer</div>
+    <div style="margin-top:12px" class="grid-3" aria-hidden>
+      <div class="card" style="padding:12px">
+        <h4>Translation Workshops</h4>
+        <p class="tiny">Legal, academic, and literary translation (AR–FR–EN). CAT tool integration.</p>
+      </div>
+      <div class="card" style="padding:12px">
+        <h4>Computational Linguistics</h4>
+        <p class="tiny">Intro to NLP, preprocessing, tokenization, evaluation metrics for MT.</p>
+      </div>
+      <div class="card" style="padding:12px">
+        <h4>Web Tools for Translators</h4>
+        <p class="tiny">Custom scripts, automation, glossaries, online QA dashboards.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section>
+    <h3>Selected Projects</h3>
+    <div class="grid-3" style="margin-top:10px">
+      <div class="card">
+        <img class="portfolio-img" alt="Online glossary" src="https://images.unsplash.com/photo-1532619675605-9f5f0fd3b37b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a7e6d1bdf0e4d3b7db0f56a9e2b8c04">
+        <h4>Collaborative Glossary Web App</h4>
+        <p class="tiny">Multi-user glossary with export to TBX / CSV — used in academic courses.</p>
+      </div>
+
+      <div class="card">
+        <img class="portfolio-img" alt="MT evaluation" src="https://images.unsplash.com/photo-1526378720505-5f54b5d987d1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=9f2358a2d9f1a2cbf0d3c7f4d1a6fbd3">
+        <h4>MT Evaluation Suite</h4>
+        <p class="tiny">Scripts and dashboards to compare MT outputs and human references (BLEU, chrF, human scores).</p>
+      </div>
+
+      <div class="card">
+        <img class="portfolio-img" alt="Course site" src="https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8f7a1c6b5c9a4aa0a3b2c1d5abc4e2f0">
+        <h4>Interactive Course Website</h4>
+        <p class="tiny">Responsive course portal for translation students with exercises and automatic feedback.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAMPLES -->
+  <section class="card" id="examples">
+    <h3>Exemples de traduction / Translation Examples / أمثلة ترجمة</h3>
+    <p class="tiny">Short samples to demonstrate style and fidelity</p>
+
+    <div style="margin-top:10px">
+      <div class="example" data-lang="en">
+<em>Original (Arabic):</em> "اللغة جسور بين الشعوب."  
+<em>English translation:</em> "Language is the bridge between peoples."
+      </div>
+
+      <div class="example" style="margin-top:8px" data-lang="fr">
+<em>Original (English):</em> "Access to information is a human right."  
+<em>French translation:</em> "L'accès à l'information est un droit humain."
+      </div>
+
+      <div class="example" style="margin-top:8px" data-lang="ar">
+<em>Original (French):</em> "La traduction exige précision et sensibilité culturelle."  
+<em>Arabic translation:</em> "الترجمة تتطلب الدقة والحساسية الثقافية."
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="card" id="contactCard">
+    <h3>Contact</h3>
+    <p class="tiny muted">Email (preferred): <a href="mailto:nounou8886@gmail.com">nounou8886@gmail.com</a></p>
+
+    <div class="contact-row" style="margin-top:10px">
+      <a href="mailto:nounou8886@gmail.com?subject=Contact%20from%20Website" class="btn">Send an email</a>
+      <button class="btn" id="openWhats">Open quick message</button>
+      <div class="socials" style="margin-left:auto">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Academia">Academia.edu</a>
+      </div>
+    </div>
+
+    <p class="tiny" style="margin-top:12px">If you prefer a downloadable CV, use the "Download CV" button above — it creates a concise CV file locally.</p>
+  </section>
+
+  <footer>
+    <div class="tiny">© <span id="year"></span> Noureddine Lazher Mouelhi — Sorbonne University • <a href="mailto:nounou8886@gmail.com">nounou8886@gmail.com</a></div>
+  </footer>
+</main>
+
+<script>
+  // small utils: language switch
+  const content = {
+    en: {
+      greet: "Hello — I'm Noureddine",
+      heroDesc: "Multidisciplinary professor and translator bridging linguistic expertise with technical skills. I teach translation, computational linguistics, and develop language-focused web tools.",
+      eduTitle: "Education",
+      skillsTitle: "Technical & Linguistic Skills",
+      servicesTitle: "Courses & Services"
+    },
+    fr: {
+      greet: "Bonjour — Je suis Noureddine",
+      heroDesc: "Professeur multidisciplinaire et traducteur qui relie expertise linguistique et compétences techniques. J'enseigne la traduction, la linguistique computationnelle et développe des outils pour la langue.",
+      eduTitle: "Formation",
+      skillsTitle: "Compétences techniques & linguistiques",
+      servicesTitle: "Cours & Services"
+    },
+    ar: {
+      greet: "مرحبًا — أنا نورالدين",
+      heroDesc: "أستاذ ومترجم متعدد التخصصات يجمع بين الخبرة اللغوية والمهارات التقنية. أدرّس الترجمة واللغويات الحسابية وأطوّر أدوات متعلقة باللغة.",
+      eduTitle: "التعليم",
+      skillsTitle: "المهارات التقنية واللغوية",
+      servicesTitle: "الدورات والخدمات"
+    }
+  };
+
+  function switchLang(lang){
+    document.getElementById('greet').textContent = content[lang].greet;
+    document.getElementById('heroDesc').textContent = content[lang].heroDesc;
+    document.getElementById('eduTitle').textContent = content[lang].eduTitle;
+    document.getElementById('skillsTitle').textContent = content[lang].skillsTitle;
+    document.getElementById('servicesTitle').textContent = content[lang].servicesTitle;
+
+    // direction for arabic
+    if(lang === 'ar'){
+      document.documentElement.lang = 'ar';
+      document.body.classList.add('rtl');
+    } else {
+      document.documentElement.lang = lang;
+      document.body.classList.remove('rtl');
+    }
+
+    // button styles
+    document.querySelectorAll('.lang-toggle button').forEach(b=>{
+      b.classList.toggle('primary', b.dataset.lang === lang);
+    });
+  }
+
+  // wire language buttons
+  document.getElementById('enBtn').addEventListener('click', ()=>switchLang('en'));
+  document.getElementById('frBtn').addEventListener('click', ()=>switchLang('fr'));
+  document.getElementById('arBtn').addEventListener('click', ()=>switchLang('ar'));
+  // initialize
+  switchLang('en');
+
+  // download CV: create a simple text CV and download
+  document.getElementById('downloadCV').addEventListener('click', ()=>{
+    const cvText = [
+      "Noureddine Lazher Mouelhi",
+      "Email: nounou8886@gmail.com",
+      "Degrees: MA Translation (Arabic/French/English); Master in Computer Science — Sorbonne University",
+      "",
+      "Profile:",
+      "Professor of Translation and Computer Science. Research interests: machine translation evaluation, computational linguistics, translation technologies.",
+      "",
+      "Skills: Python (NLP), JavaScript, HTML/CSS, CAT tools (Trados, MemoQ), MT evaluation, curriculum design.",
+      "",
+      "Selected Projects:",
+      "- Collaborative Glossary Web App",
+      "- MT Evaluation Suite",
+      "- Interactive Course Website",
+      "",
+      "Available for workshops, research collaborations, consultancy.",
+      "",
+      "Generated: " + new Date().toLocaleString()
+    ].join("\\n");
+
+    const blob = new Blob([cvText], {type: 'text/plain;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'CV_Noureddine_Lazher_Mouelhi.txt';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  });
+
+  // contact open quick message (WhatsApp link via WA web optional)
+  document.getElementById('openWhats').addEventListener('click', ()=>{
+    // No phone provided — open mailto as fallback
+    window.location.href = "mailto:nounou8886@gmail.com?subject=Quick%20message";
+  });
+
+  // contact button scroll
+  document.getElementById('contactBtn').addEventListener('click', ()=>{
+    document.getElementById('contactCard').scrollIntoView({behavior:'smooth'});
+  });
+
+  // set year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
